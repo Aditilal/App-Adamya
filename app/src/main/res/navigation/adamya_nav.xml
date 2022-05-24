@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adamya_nav"
+    app:startDestination="@id/chat1">
+
+    <fragment
+        android:id="@+id/chat1"
+        android:name="com.example.vitality.Chats"
+        android:label="fragment_chats"
+
+        tools:layout="@layout/fragment_chats" />
+    <fragment
+        android:id="@+id/exercise1"
+        android:name="com.example.vitality.Exercise"
+        android:label="fragment_exercise"
+        tools:layout="@layout/fragment_exercise" />
+    <fragment
+        android:id="@+id/music1"
+        android:name="com.example.vitality.Music"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/home21"
+        android:name="com.example.vitality.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

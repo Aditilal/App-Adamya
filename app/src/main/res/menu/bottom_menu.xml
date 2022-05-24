@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Ayush"
+        android:icon="@drawable/peace"
+        android:id="@+id/chat1"/>
+    <item android:title="@string/exercise"
+        android:icon="@drawable/ic_yoga"
+        android:id="@+id/exercise1"/>
+    <item android:title="@string/music"
+        android:icon="@drawable/ic_baseline_music_"
+        android:id="@+id/music1"/>
+    <item android:title="@string/account"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:id="@+id/home21"/>
+</menu>

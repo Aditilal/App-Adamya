@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <TextView
+        android:id="@+id/covid"
+        android:layout_width="236dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="548dp"
+        android:fontFamily="@font/bigshot_one"
+        android:text="Covid-19 tips"
+        android:textAlignment="center"
+        android:textColor="#0E0E0E"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/covidClick"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="308dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="553dp"
+        android:src="@drawable/click" />
+
+    <TextView
+        android:layout_width="241dp"
+        android:layout_height="62dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="456dp"
+        android:fontFamily="@font/bigshot_one"
+        android:text="Depression tips"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/depression_click"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="480dp"
+        android:src="@drawable/click" />
+
+    <TextView
+        android:layout_width="262dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="395dp"
+        android:fontFamily="@font/bigshot_one"
+        android:text="Internet Addiction"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/internet_click"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="398dp"
+        android:src="@drawable/click" />
+
+    <TextView
+        android:layout_width="313dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="290dp"
+        android:fontFamily="@font/bigshot_one"
+        android:text="Stress Management"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/stress_click"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="308dp"
+        android:src="@drawable/click" />
+
+    <ImageView
+        android:layout_width="370dp"
+        android:layout_height="238dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/menu" />
+
+
+</RelativeLayout>

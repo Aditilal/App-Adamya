@@ -1,0 +1,113 @@
+Create table department004(
+dno int primary key,
+dname varchar2(10),
+mgrstartdate date);
+
+create table employee004(
+ssn varchar2(10) primary key,
+name varchar2(10),
+address varchar2(20),
+sex char(1),
+salary number,
+superssn varchar2(10) references employee004(ssn),
+dno int references department004(dno) on delete cascade);
+
+alter table department004 add mgrssn varchar2(10) references employee(ssn) on delete cascade;
+
+create table dlocation(
+dno int references department004(dno) on delete cascade,
+dloc varchar2(10),
+primary key (dno,dloc));
+
+create table project004(
+pno int primary key,
+pname varchar2(10),
+plocation varchar2(20),
+dno int references department004(dno) on delete cascade);
+
+create table workson004(
+ssn varchar2(10) references employee004(ssn) on delete cascade,
+pno int references project004(pno) on delete cascade,
+hours int);
+
+
+insert into employee004(ssn,name,address,sex,salary) values ('001','James Scott','Bangalore','M',500000);
+insert into employee004(ssn,name,address,sex,salary) values ('002','Ted Scherbatsky','Pune','M',700000);
+insert into employee004(ssn,name,address,sex,salary) values ('003','Meghan David','Bangalore','F',800000);
+insert into employee004(ssn,name,address,sex,salary) values ('004','Barney Stinson','Bangalore','F',350000);
+insert into employee004(ssn,name,address,sex,salary) values ('005','Steven Scott','Mangalore','M',450000);
+insert into employee004(ssn,name,address,sex,salary) values ('006','Kane Adams','Mumbai','M', 200000);
+insert into employee004(ssn,name,address,sex,salary) values ('007','Regina Phalange','Delhi','F', 650000);
+
+insert into department004 values (05,'Accounts','12-JAN-2010','007');
+insert into department004 values (06, 'Sales & IT','15-DEC-2009','005');
+
+update employee004 set superssn='002', dno=05
+where ssn='001';
+update employee004 set superssn=null, dno=05
+where ssn='002';
+update employee004 set superssn=null, dno=06
+where ssn='003';
+update employee004 set superssn='003', dno=06
+where ssn='004';
+update employee004 set superssn='003', dno=06
+where ssn='005';
+update employee004 set superssn='003', dno=06
+where ssn='006';
+update employee004 set superssn='003', dno=06
+where ssn='007';
+
+
+insert into workson004 values ('001',1002,10);
+insert into workson004 values ('002',1002,14);
+insert into workson004 values ('003',1000,15);
+insert into workson004 values ('003',1001,18);
+insert into workson004 values ('004',1000,12);
+insert into workson004 values ('005',1001,18);
+insert into workson004 values ('006',1001,13);
+insert into workson004 values ('007',1000,16);
+
+select distinct p.pno
+from project004 p, department004 d, employee004 e 
+where e.dno=d.dno and
+d.mgrssn = e.ssn
+and e.name like '% Scott'
+union
+select distinct workson004.pno
+from workson004, employee004
+where name like '% Scott' and
+employee004.ssn = workson004.ssn;
+
+
+select employee.ssn, employee.name, salary*1.1 AS "UPDATED_SALARY"
+from employee, works_on, project
+where employee.ssn = works_on.ssn and
+works_on.pno = project.pno
+and project.pname = 'IoT';
+
+
+#Query3:
+select sum(salary) AS "SUM", max(salary) AS "MAX", min(salary) AS "MIN", avg(salary) as "AVERAGE"
+from employee, department
+where dname = 'Accounts' and
+employee.dno = department.dno;
+
+
+#Query4:
+select e.name
+from employee e
+where NOT EXISTS ((select pno from project where dno=05) MINUS (select pno from works_on where e.ssn=ssn));
+
+
+
+#Query5:
+select dno, count(*)
+from employee
+where salary > 600000 and 
+dno in ( select dno from employee 
+        group by dno
+        having count(*)>=5 )
+group by dno;
+
+
+

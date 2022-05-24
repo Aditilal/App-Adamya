@@ -1,0 +1,85 @@
+create table student004(
+usn varchar2(10) primary key,
+sname varchar2(15),
+address varchar2(20),
+phone varchar2(12),
+gender char);
+
+create table semsec004(
+ssid varchar2(10) primary key,
+sem int,
+sec char);
+
+create table class004(
+usn varchar2(10) references student004(usn) on delete cascade,
+ssid varchar2(10) references semsec004(ssid) on delete cascade);
+
+create table subject004(
+subcode varchar2(10) primary key,
+title varchar2(15),
+sem int,
+credits int);
+
+create table iamarks004(
+usn varchar2(10) references student004(usn) on delete cascade,
+subcode varchar2(10) references subject004(subcode) on delete cascade,
+ssid varchar2(10) references semsec004(ssid) on delete cascade,
+test1 int,
+test2 int,
+test3 int,
+finalia int);
+
+insert into student004 values('1by19cs001','aditi','bangalore','8197247055','F');
+insert into student004 values('1by18me004','prakash','mangalore','819724455','M');
+insert into student004 values('1by17cs007','ayan','belgaum','8195647055','M');
+insert into student004 values('1by16ee023','ayush','bihar','8197245055','M');
+insert into student004 values('1by15et022','harsh','bokaro','8196787055','M');
+
+insert into semsec004 values('5A',5,'A');
+insert into semsec004 values('7B',7,'B');
+insert into semsec004 values('8C',8,'C');
+insert into semsec004 values('4C',4,'C');
+insert into semsec004 values('3A',3,'A');
+
+insert into class004 values('1by19cs001','5A');
+insert into class004 values('1by18me004','7B');
+insert into class004 values('1by17cs007','8C');
+insert into class004 values('1by16ee023','4C');
+insert into class004 values('1by15et022','3A');
+
+insert into subject004 values('18cs51','ME',5,3);
+insert into subject004 values('18me72','cns',7,4);
+insert into subject004 values('18csl58','dbms',8,3);
+insert into subject004 values('18civ54','evs',4,2);
+insert into subject004 values('18cs55','adp',3,2);
+ 
+insert into iamarks004 values('1by19cs001','18cs51','5A',16,17,19,0);
+insert into iamarks004 values('1by18me004','18me72','7B',13,12,17,0);
+insert into iamarks004 values('1by19cs001','18csl58','8C',16,18,19,0);
+insert into iamarks004 values('1by19cs001','18civ54','4C',16,19,19,0);
+insert into iamarks004 values('1by19cs001','18cs55','3A',15,17,19,0);
+
+
+select s.usn,s.sname,s.address,s.phone,s.gender
+from student004 s,semsec004 ss,class004 c
+where c.usn=s.usn and ss.ssid=c.ssid and sem=4 and sec='C';
+
+select ss.sem,ss.sec,s.gender,count(gender) from student004 s, semsec004 ss,class004 c where c.usn=s.usn and ss.ssid=c.ssid group by ss.sem,ss.sec,s.gender;
+
+create view test1  as select test1,usn from iamarks004 where usn='1by19cs001';
+
+
+
+update iamarks004 set finalia = greatest(test1+test2,test2+test3,test3+test1)/2;
+
+select s.sname,s.usn,s.address,s.phone,s.gender,
+(case
+when ia.finalia between 10 and 20 then 'Outstanding'
+when ia.finalia between 5 and 10 then 'Average'
+else 'weak'
+end) as category
+from iamarks004 ia, subject004 sub,semsec ss,student004 s
+where ia.usn = s.usn and ia.subcode=sub.subcode and ia.ssid=ss.ssid
+and ss.sem=5;
+
+

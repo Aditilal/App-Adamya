@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back_yoga"
+    android:layout_height="match_parent">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:layout_editor_absoluteX="-38dp"-->
+<!--        tools:layout_editor_absoluteY="0dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/title"-->
+<!--                android:layout_width="217dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="6dp"-->
+<!--                android:text="Yoga poses for relief"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white" />-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/abstract1"-->
+<!--                android:layout_width="388dp"-->
+<!--                android:layout_height="321dp"-->
+<!--                android:layout_marginLeft="4dp"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:layout_marginRight="4dp"-->
+<!--                android:backgroundTint="@color/teal_700"-->
+
+<!--                app:srcCompat="@drawable/anjaneyasana" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/pose1"-->
+<!--                android:layout_width="396dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Anjaneyasana"-->
+<!--                android:textAlignment="center"-->
+<!--android:layout_marginBottom="37dp"-->
+<!--                android:textColor="@color/white"-->
+
+<!--                android:textSize="34dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/desc1"-->
+<!--                android:layout_width="400dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="3dp"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:text="This pose is also known as “the high lunge”. Doing the crescent variation of this exercise is known to help improve your blood flow, calm your mind."-->
+<!--                android:textColor="#0B0B0B"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/instruct1"-->
+<!--                android:layout_width="131dp"-->
+
+<!--                android:layout_height="26dp"-->
+<!--                android:layout_marginRight="150dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="How to do it:"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/para1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="While standing, lunge one leg forward-->
+<!--Bend the front knee, make sure your knee is in line with your ankle, stretch your back leg.-->
+<!--Press your ankle flat against the ground on both ankles.-->
+<!--Raise your arms to the sky and connect your palms.-->
+<!--Breathe in deeply and breathe out in an even flow.-->
+<!--Repeat 5 times per leg."-->
+<!--                android:textColor="#020202"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/anjaneyasana"-->
+<!--                android:layout_width="361dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:layout_marginLeft="55dp"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:background="@color/av_red"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="Click here to watch the video"-->
+<!--                android:textColor="@color/colorPrimary" />-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/garudasana"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="321dp"-->
+<!--                app:srcCompat="@drawable/Garudasana" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/pose2"-->
+<!--                android:layout_width="396dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Garudasana"-->
+<!--                android:textAlignment="center"-->
+<!--                android:layout_marginBottom="37dp"-->
+<!--                android:textColor="@color/white"-->
+
+<!--                android:textSize="34dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/abstract2"-->
+
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="3dp"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:text="This pose is known commonly as the eagle pose. This pose requires you to breathe while holding your body in balance. It helps prevent anxiety attacks while improving your focus."-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/instruct2"-->
+<!--                android:layout_width="131dp"-->
+
+<!--                android:layout_height="26dp"-->
+<!--                android:layout_marginRight="150dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="How to do it:"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/para2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Breathe in deep, shift the weight of your body onto one leg.-->
+<!--Slowly wrap one leg around the other.-->
+<!--Sink your hips and gently bend your knees.-->
+<!--Keep your ankle flat on the ground.-->
+<!--Keep your breathing even and slow.-->
+<!--Wrap one arm around the other at the elbows and wrists."-->
+
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="17sp" />-->
+
+
+<!--            <Button-->
+<!--                android:id="@+id/garudasanabtn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="Click here to watch the video"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:layout_marginLeft="55dp"-->
+<!--                android:layout_margin="20dp"/>-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/vir"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="321dp"-->
+<!--                app:srcCompat="@drawable/virbhadrasana" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/pose3"-->
+<!--                android:layout_width="396dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Virbhadrasana"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="34dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/abstract3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="3dp"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:text="Commonly referred to as “the warrior pose”, there are numerous variations to this exercise, all of which require focus and steady breathing. We are covering the basic warrior pose."-->
+<!--                android:textColor="#0C0C0C"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/instruct3"-->
+<!--                android:layout_width="131dp"-->
+
+<!--                android:layout_height="26dp"-->
+<!--                android:layout_marginRight="150dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="How to do it:"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/para3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="3dp"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:text="While on two feet, spread your legs wide, turn your hips to one side, turn your ankles to the side you are facing.-->
+<!--Bend the front leg to a 90-degree angle.-->
+<!--Stretch your arms to your sides and breathe in deeply and evenly for 10 seconds."-->
+<!--                android:textColor="#0C0C0C"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/Virbhadrasana"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="Click here to watch the video"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:layout_marginLeft="55dp"-->
+<!--                android:layout_margin="20dp"/>-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/sav"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="321dp"-->
+<!--                app:srcCompat="@drawable/savasana" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/pose4"-->
+<!--                android:layout_width="396dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="Savasana"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="34dp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/abstract4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="3dp"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:text="Known as “the dead body pose”, this asana is similar to lying down to take a nap. It is extremely easy to do."-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/instruct4"-->
+<!--                android:layout_width="152dp"-->
+
+<!--                android:layout_height="19dp"-->
+<!--                android:layout_marginRight="150dp"-->
+<!--                android:background="@drawable/yoga_bg_black"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="How to do it:"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/white" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/para4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="3dp"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:text="Lay flat on the ground, stretch your legs out.-->
+<!--Stretch your arms beside you and let your palms face skyward.-->
+<!--Close your eyes, maintain even breathing while your focus wanders around you.-->
+<!--Listen to the sounds and continue breathing for 5 minutes."-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/savasana"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="Click here to watch the video"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:layout_marginLeft="55dp"-->
+<!--                android:layout_margin="20dp"/>-->
+
+
+<!--        </LinearLayout>-->
+
+<!--    </ScrollView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
